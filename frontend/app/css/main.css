@@ -1,0 +1,94 @@
+.loader {
+    border: 6px solid #f3f3f3; /* Light grey */
+    border-top: 6px solid #3498db; /* Blue */
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    animation: spin 2s linear infinite;
+    margin: auto;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.content{
+    width: 800px;
+    margin: auto;
+    margin-top: 20px;
+}
+
+.search-bar{
+    width: 800px;
+    margin: 0px;
+    margin-bottom: 20px;
+}
+
+.view{
+    margin-top: 20px;
+}
+
+.search-elem{
+    padding: 0;
+}
+
+.list-book-item{
+    height: 100px;
+}
+
+.list-book-left{
+    height: 80px;
+    width: 60px;
+}
+
+.list-book-center{
+    margin-left: 20px;
+    height: 80px;
+    width: 600px;
+}
+
+.list-book-title{
+    font-weight: bold;
+}
+
+.list-book-author{
+    font-size: 13px;
+}
+
+.list-book-right{
+    height: 80px;
+    width: 70px;
+}
+
+.list-book-available{
+    float: right;
+}
+
+.view-book-left{
+    width: 200px;
+    height: 300px;
+    float: left;
+}
+
+.view-book-center{
+    float: left;
+    width: 580px;
+    margin-left: 20px;
+}
+
+.book-large{
+    width: 200px;
+}
+
+.book-small{
+    width: 55px;
+}
+
+.available-green{
+    color: green;
+}
+
+.available-red{
+    color: red;
+}

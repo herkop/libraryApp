@@ -1,0 +1,49 @@
+<h1>Laenutamine</h1>
+
+<div>
+    <form ng-submit="lending()">
+        <div class="alert alert-danger" role="alert" ng-show="notFoundAlert">
+            Raamatut ei leitud!
+        </div>
+        <div class="alert alert-danger" role="alert" ng-show="emptyAlert">
+            Kõik väljad peavad olema täidetud!
+        </div>
+        <div class="alert alert-success" role="alert" ng-show="successAlert">
+            Raamatu laenutamine õnnestus!
+        </div>
+        <div class="alert alert-danger" role="alert" ng-show="errorAlert">
+            Raamatu laenutamisel tekkis viga!
+        </div>
+        <div class="form-group row">
+            <label class="col-sm-2 col-form-label">Raamat:</label>
+            <div class="col-sm-10">
+                {{book.title}}
+            </div>
+        </div>
+        <div class="form-group row">
+            <label class="col-sm-2 col-form-label">Autor:</label>
+            <div class="col-sm-10">
+                {{book.author}}
+            </div>
+        </div>
+        <div class="form-group row">
+            <label for="firstname" class="col-sm-2 col-form-label">Eesnimi</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" id="firstname" placeholder="Eesnimi" ng-model="firstname">
+            </div>
+        </div>
+        <div class="form-group row">
+            <label for="lastname" class="col-sm-2 col-form-label">Perekonnanimi</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" id="lastname" placeholder="Perekonnanimi" ng-model="lastname">
+            </div>
+        </div>
+        <div class="form-group row">
+            <label for="email" class="col-sm-2 col-form-label">Email</label>
+            <div class="col-sm-10">
+                <input type="email" class="form-control" id="email" placeholder="Email" ng-model="email">
+            </div>
+        </div>
+        <button type="submit" class="btn btn-primary" ng-disabled="butDisable">Laenuta</button>
+    </form>
+</div>

@@ -1,0 +1,41 @@
+<div class="view-book">
+    <div class="alert alert-danger" role="alert" ng-show="notFoundAlert">
+       Raamatut ei leitud!
+    </div>
+    <div class="view-book-left">
+        <img src="../img/default_book.svg" class="book-large">
+    </div>
+    <div class="view-book-center">
+        <div class="row">
+            <div class="col-md-3">Pealkiri:</div>
+            <div class="col-md-9"><div class="list-book-title">{{book.title}}</div></div>
+        </div>
+        <div class="row">
+            <div class="col-md-3">Autor:</div>
+            <div class="col-md-9">{{book.author}}</div>
+        </div>
+        <div class="row">
+            <div class="col-md-3">Ilmunud:</div>
+            <div class="col-md-9">{{book.year}}</div>
+        </div>
+        <div class="row">
+            <div class="col-md-3">Keel:</div>
+            <div class="col-md-9">{{book.language}}</div>
+        </div>
+        <div class="row">
+            <div class="col-md-3">ISBN:</div>
+            <div class="col-md-9">{{book.isbn}}</div>
+        </div>
+        <div class="row">
+            <div class="col-md-3">Saadavus:</div>
+            <div class="col-md-9">
+                <span class="available-green" ng-hide="available">Olemas</span>
+                <span class="available-red" ng-show="available">Otsas</span>
+            </div>
+        </div>
+        <div>
+            <button type="button" class="btn btn-secondary" ui-sref="lending({bookId: book.id})" ng-disabled="available">Laenuta</button>
+            <button type="button" class="btn btn-secondary" ui-sref="return({bookId: book.id})" ng-disabled="!available">Tagasta</button>
+        </div>
+    </div>
+</div>
